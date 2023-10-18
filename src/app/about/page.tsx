@@ -12,7 +12,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-        <Link href={"/"}>Home</Link> <hr />
+        <Link href="/" replace={true}>Home</Link> <hr />
         AboutPage</div>
   )
 }
