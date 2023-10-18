@@ -1,7 +1,8 @@
 
-import { Inter } from "next/font/google";
+import {Kanit } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const kanit = Kanit({ subsets: ["thai"],
+weight:['100','200','300','500','700'] });
 
 export const metadata = {
   title: "about hisData",
@@ -17,7 +18,7 @@ export default function RootLayout({
     
      <div>
          
-        <h3>Layout About</h3>
+        <h3 className={kanit.className}>Layout About</h3>
         <hr />
         {children}
        

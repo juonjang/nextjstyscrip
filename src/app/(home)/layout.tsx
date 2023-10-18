@@ -1,7 +1,9 @@
  import "../globals.css";
-import { Inter } from "next/font/google";
+import { Inter,Kanit,Sarabun } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const sarabun = Sarabun({ subsets: ["thai"],
+weight:['100','200','300'] });
+const kanit = Kanit({ subsets: ["thai"],weight:['100','200','300','500','700'] });
 
 export const metadata = {
   title: "Create Next App",
@@ -15,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <h1>Header</h1>
+      <body className={sarabun.className}>
+        <h1>Header สวัสดี</h1>
         <hr />
         {children}
         <hr />
