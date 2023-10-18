@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <main >
       <div>
-        <Link href={"/about"}>about</Link>
+        <Link href={"/about"}>about</Link> <br />
+        <Link href={"/dashboard"}>dashboard</Link>
       </div>
       <p className="header">สวัสดี  Hospital</p>
       <p>{process.env.DB_USER}</p>
