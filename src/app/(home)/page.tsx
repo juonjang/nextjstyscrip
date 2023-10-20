@@ -2,20 +2,13 @@ import { FaHome} from "react-icons/fa"
 import AppHeader from '@/client-components/AppHeader'
 import styles from './page.module.css'
 import Link from "next/link";
+import { Button } from '@mantine/core';
+import HomeContent from "./ui/HomePage";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main >
-      <div>
-        <Link href={"/about"}>about</Link> <br />
-        <Link href={"/dashboard"}>dashboard</Link>
-      </div>
-      <p className="header">สวัสดี  Hospital</p>
-      <p>{process.env.DB_USER}</p>
-      <p>{process.env.DB_PASSWORD}</p>
-      <FaHome size={50}/>
-      <AppHeader />
-      <p className={styles.title}> NB-Hospital</p>
+       <HomeContent/>
     </main>
   );
 }
