@@ -112,7 +112,7 @@ import { usePathname } from 'next/navigation';
             
   
             <Group h="100%" gap={0} visibleFrom="sm">
-              <Link href="./" className={ pathname == "/" ? classes.active : classes.link}>
+              <Link href="./" className={ pathname == "/" ? classes.active : classes.link} >
                 Home
               </Link>
               <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
@@ -159,7 +159,7 @@ import { usePathname } from 'next/navigation';
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard>
-              <Link href="./about" className={pathname == "/about" ? classes.active:classes.link}>
+              <Link href="./about" className={pathname == "/about" ? classes.active:classes.link} >
                 About us
               </Link>
               <a href="#" className={classes.link}>
@@ -188,7 +188,7 @@ import { usePathname } from 'next/navigation';
           <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
             <Divider my="sm" />
   
-            <Link href="./" className={pathname == "/" ? "active":classes.link}>
+            <Link href="./" className={pathname == "/" ? classes.active:classes.link} onClick={toggleDrawer}>
               Home
             </Link>
             <UnstyledButton className={classes.link} onClick={toggleLinks}>
@@ -203,9 +203,9 @@ import { usePathname } from 'next/navigation';
               </Center>
             </UnstyledButton>
             <Collapse in={linksOpened}>{links}</Collapse>
-            <a href="#" className={classes.link}>
-              Learn
-            </a>
+            <Link href="./about" className={pathname == "/about" ? classes.active:classes.link} onClick={toggleDrawer}>
+              About us
+            </Link>
             <a href="#" className={classes.link}>
               Academy
             </a>
