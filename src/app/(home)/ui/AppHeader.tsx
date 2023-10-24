@@ -19,12 +19,14 @@ import {
     ScrollArea,
     rem,
     useMantineTheme,
+    Container,
   } from '@mantine/core';
 //   import { MantineLogo } from '@mantine/ds';
   import { useDisclosure } from '@mantine/hooks';
   import { FaHome } from 'react-icons/fa';
   import { FaBookMedical } from 'react-icons/fa';
   import { IoIosStats} from 'react-icons/io'
+ 
 
 
   import {
@@ -95,11 +97,13 @@ import {
     ));
   
     return (
-      <Box pb={120}>
+        <Container size= 'xl'>
+        
+      <Box pb={10}>
         <header className={classes.header}>
           <Group justify="space-between" h="100%">
             {/* <MantineLogo size={30} /> */}
-            <FaHome size = {50}/>
+            <FaHome size = {50}/> <h2>NB-HOSPITAL</h2>
             
   
             <Group h="100%" gap={0} visibleFrom="sm">
@@ -210,5 +214,8 @@ import {
           </ScrollArea>
         </Drawer>
       </Box>
-    );
-  }
+      </Container>
+
+    ) 
+  } 
+ 
