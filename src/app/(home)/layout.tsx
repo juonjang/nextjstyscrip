@@ -3,6 +3,7 @@
 import Providers from "@/components/Providers";
 import "../globals.css";
 import { AppHeader } from "./ui/AppHeader";
+import { Divider} from "@mantine/core"
 
 
 

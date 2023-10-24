@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
+import AboutContent from '../ui/AboutContent';
 
 
 
@@ -12,7 +13,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div>
-        <Link href="/" replace={true}>Home</Link> <hr />
-        AboutPage</div>
+      <AboutContent/>
+    </div>
   )
 }

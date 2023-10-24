@@ -39,6 +39,8 @@ import {
     IconChevronDown,
   } from '@tabler/icons-react';
   import classes from './HeaderMegaMenu.module.css';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
   
   const mockdata = [
     {
@@ -74,6 +76,9 @@ import {
   ];
   
   export function AppHeader() {
+    const pathname = usePathname();
+
+
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const theme = useMantineTheme();
@@ -107,9 +112,9 @@ import {
             
   
             <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="#" className={classes.link}>
+              <Link href="./" className={ pathname == "/" ? classes.active : classes.link}>
                 Home
-              </a>
+              </Link>
               <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
                   <a href="#" className={classes.link}>
@@ -154,9 +159,9 @@ import {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard>
-              <a href="#" className={classes.link}>
-                Learn
-              </a>
+              <Link href="./about" className={pathname == "/about" ? classes.active:classes.link}>
+                About us
+              </Link>
               <a href="#" className={classes.link}>
                 Academy
               </a>
@@ -183,9 +188,9 @@ import {
           <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
             <Divider my="sm" />
   
-            <a href="#" className={classes.link}>
+            <Link href="./" className={pathname == "/" ? "active":classes.link}>
               Home
-            </a>
+            </Link>
             <UnstyledButton className={classes.link} onClick={toggleLinks}>
               <Center inline>
                 <Box component="span" mr={5}>
